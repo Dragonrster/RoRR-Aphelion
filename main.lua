@@ -1,6 +1,6 @@
 -- Aphelion
 
-local envy = mods["MGReturns-ENVY"]
+local envy = mods["LuaENVY-ENVY"]
 envy.auto()
 mods["RoRRModdingToolkit-RoRR_Modding_Toolkit"].auto()
 Cooldown = mods["Klehrik-CooldownHelper"].setup()

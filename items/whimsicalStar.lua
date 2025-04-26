@@ -20,7 +20,7 @@ item:onAcquire(function(actor, stack)
         instData.parent = actor
         instData.number = #actorData.insts
         instData.prev = actor
-        if i > 1 then inst.prev = actorData.insts[#actorData.insts] end
+        if #actorData.insts > 0 then instData.prev = actorData.insts[#actorData.insts] end
         table.insert(actorData.insts, inst)
     end
 end)
@@ -74,7 +74,7 @@ obj:onStep(function(self)
     local selfData = self:get_data()
 
     -- Destroy self if parent no longer exists
-    if not selfData.prev:exists() then
+    if not Instance.exists(selfData.prev) then
         self:destroy()
         return
     end
@@ -92,12 +92,12 @@ obj:onStep(function(self)
     end
 
     -- Clamp max speed
-    local max_speed = gm.clamp(gm.point_distance(self.x, self.y, selfData.parent.x, selfData.parent.y) / 28.0, 4.0, 12.0)
+    local max_speed = 4 --gm.clamp(gm.point_distance(self.x, self.y, selfData.parent.x, selfData.parent.y) / 28.0, 4.0, 12.0)
     if math.abs(selfData.hsp) > max_speed then selfData.hsp = max_speed * gm.sign(selfData.hsp) end
     if math.abs(selfData.vsp) > max_speed then selfData.vsp = max_speed * gm.sign(selfData.vsp) end
 
     -- Move
-    if not selfData.intercept_target:exists() then
+    if not Instance.exists(selfData.intercept_target) then
         self.x = self.x + selfData.hsp
         self.y = self.y + selfData.vsp
     end
@@ -129,7 +129,7 @@ obj:onStep(function(self)
 
     if selfData.cooldown <= 0 then
         -- Get nearest projectile to intercept
-        if not selfData.intercept_target:exists() then
+        if not Instance.exists(selfData.intercept_target) then
             local found = false
             local dist = selfData.intercept_range
             local projs = Instance.find_all(Instance.projectiles)

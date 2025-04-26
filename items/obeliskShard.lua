@@ -12,7 +12,7 @@ item:onPostStep(function(actor, stack)
     if actor.still_timer >= 2 *60.0 then
         -- Reduce equipment cooldown
         if actor:get_equipment_cooldown() > 0 then
-            actor:reduce_equipment_cooldown(0.1 + (stack * 0.3))
+            actor:reduce_equipment_cooldown(0.2 + (stack * 0.3))
         end
     end
 end)
