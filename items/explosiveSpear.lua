@@ -27,7 +27,7 @@ item:onHitProc(function(actor, victim, stack, hit_info)
 
     -- Calculate damage
     instData.pop_damage = hit_info.damage * (0.06 + (actor:item_stack_count(item) * 0.06))
-    instData.damage = hit_info.damage * (1.0 + (actor:item_stack_count(item) * 1.5))
+    instData.damage = hit_info.damage * (1.0 + (actor:item_stack_count(item) * 1.0))
 
     -- Apply cooldown
     Cooldown.set(actor, "aphelion-explosiveSpear", 10 *60, spriteCooldown, Color(0xff004d))

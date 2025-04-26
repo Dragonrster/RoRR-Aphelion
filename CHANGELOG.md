@@ -1,3 +1,23 @@
+### v1.2.20
+Next update was intended to be released alongside ReturnsAPI,
+but I've "backported" the current changes so far.
+* Crimson Scarf : Crit bonus per kill: 6% -> 7%
+* Explosive Spear
+    * Explosion damage: 250% (+150% per stack) -> 200% (+100% per stack)
+    * Resprited
+* Obelisk Shard : First stack CD Reduction: 40% -> 50%
+* Phi Construct : Base fire rate 0.8 sec -> 1 sec
+* Relic Guard
+    * Barrier gain: 60% (+20% per stack) -> 100% (+50% per stack)
+* Overloaded Capacitor : Lightning chain range: 150 -> 80 px
+* Whimsical Star
+    * Fixed incorrect movement behavior.
+
+### v1.2.19
+* Ballistic Vest : Additional stack shield gain: +15 -> +20
+* Withered Branch : Additional stack on-hit chance: +10% -> +15%
+* Stiletto : Additional stack crit damage scaling: +0.5% -> +1%
+
 ### v1.2.18
 * Updated skill onStep callback rename.
 * War Drum : Added logbook entry
@@ -19,7 +39,7 @@
 * Added Mystery Box (rare item)
 * Explosive Spear : Is now thrown in the direction of the target hit instead of facing direction.
 * Obelisk Shard : Replaced buff indicator with new particle vfx and sfx.
-* Six Shooter : 6th shot damage bonus: +33% (+33% per stack); now applies on first stack
+* Six Shooter : 6th shot damage bonus: 50% -> 33%; now applies on first stack
 * Shattered Glass : Now uses CurseHelper.
 * Spotter: BLAST : Explosion is now centered at the point of attack collision.
 

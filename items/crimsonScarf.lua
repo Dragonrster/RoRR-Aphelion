@@ -50,5 +50,5 @@ buff:onPostStep(function(actor, stack)
 end)
 
 buff:onStatRecalc(function(actor, stack)
-    actor.critical_chance = actor.critical_chance + (6 * stack)
+    actor.critical_chance = actor.critical_chance + (7 * stack)
 end)

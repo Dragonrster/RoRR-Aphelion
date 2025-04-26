@@ -72,7 +72,7 @@ obj:onStep(function(self)
 
 
     -- Increment charge
-    local req = 60.0 / (1.25 * (0.9 + (selfData.parent.maxshield /200.0)))
+    local req = 60.0 / (1.0 * (0.9 + (selfData.parent.maxshield /200.0)))
     if selfData.charge < req then
         selfData.charge = selfData.charge + 1
         selfData.charged = nil

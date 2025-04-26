@@ -17,6 +17,6 @@ item:onHitProc(function(actor, victim, stack, hit_info)
         local lightning = obj:create(victim.x, victim.y)
         lightning.damage = hit_info.damage * (stack * 0.3)
         lightning.bounce = 2
-        lightning.range = 150.0
+        lightning.range = 80.0
     end
 end)
